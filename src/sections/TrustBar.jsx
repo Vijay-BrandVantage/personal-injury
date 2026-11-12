@@ -7,11 +7,9 @@ const stats = [
   { value: String(team.length), label: 'People in our team', note: 'led by Emma Mead' },
 ]
 
-const badges = Array.from({ length: 22 }, (_, i) => `a${String(i + 1).padStart(2, '0')}`)
-
 export default function TrustBar() {
   return (
-    <section aria-label="Why people trust us" className="relative z-10 bg-white">
+    <section aria-label="Why people trust us" className="relative z-10 bg-white pb-14 lg:pb-16">
       <div className="wrap">
         <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-b-3xl bg-line lg:-mt-12 lg:grid-cols-4 lg:rounded-3xl lg:shadow-[0_30px_60px_-30px_rgb(1_34_56/0.35)]">
           {stats.map((s) => (
@@ -22,16 +20,6 @@ export default function TrustBar() {
             </div>
           ))}
         </dl>
-      </div>
-
-      <div className="marquee-host mt-14 overflow-hidden pb-4 [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]" aria-label="Doyles Guide and industry awards">
-        <ul className="marquee flex w-max items-center gap-10">
-          {[...badges, ...badges].map((b, i) => (
-            <li key={i} aria-hidden={i >= badges.length || undefined}>
-              <img src={`/images/awards/${b}.png`} alt={i < badges.length ? 'Doyles Guide award badge' : ''} width="371" height="340" loading="lazy" className="h-24 w-auto" />
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   )

@@ -3,7 +3,7 @@ import Icon from '../components/Icon.jsx'
 
 export default function WhyUs() {
   return (
-    <section id="about" aria-labelledby="about-title" className="bg-mist py-24 lg:py-32">
+    <section id="about" aria-labelledby="about-title" className="bg-white py-24 lg:py-32">
       <div className="wrap grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
         <div className="relative">
           <img

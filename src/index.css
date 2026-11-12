@@ -175,18 +175,8 @@
   from { transform: scale(1.08); }
   to { transform: scale(1); }
 }
-.marquee {
-  animation: marquee 50s linear infinite;
-}
-.marquee-host:hover .marquee {
-  animation-play-state: paused;
-}
-@keyframes marquee {
-  to { transform: translateX(-50%); }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .intro, .hero-img, .marquee { animation: none; }
+  .intro, .hero-img { animation: none; }
   .card-lift:hover { transform: none; }
 }
