@@ -5,7 +5,7 @@ export default function WhyUs() {
   return (
     <section id="about" aria-labelledby="about-title" className="bg-white py-24 lg:py-32">
       <div className="wrap grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
-        <div className="relative">
+        <div data-reveal="left" className="relative">
           <img
             src="/images/foyer.webp"
             alt="The reception of our Newcastle office, with mustard armchairs and timber walls"
@@ -23,7 +23,7 @@ export default function WhyUs() {
           </div>
         </div>
 
-        <div className="pt-6 lg:pt-0">
+        <div data-reveal="right" style={{ '--rd': '120ms' }} className="pt-6 lg:pt-0">
           <h2 id="about-title" className="heading max-w-[16ch]">
             You've come to the right place
           </h2>

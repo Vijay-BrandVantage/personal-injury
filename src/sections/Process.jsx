@@ -26,7 +26,7 @@ export default function Process() {
   return (
     <section id="process" aria-labelledby="process-title" className="bg-white py-24 lg:py-32">
       <div className="wrap grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
-        <div className="lg:sticky lg:top-28 lg:self-start">
+        <div data-reveal="left" className="lg:sticky lg:top-28 lg:self-start">
           <h2 id="process-title" className="heading max-w-[14ch]">
             Get started in 3 simple steps
           </h2>
@@ -62,7 +62,7 @@ export default function Process() {
           </div>
         </div>
 
-        <ol className="relative">
+        <ol data-reveal="right" style={{ '--rd': '120ms' }} className="relative">
           {steps.map((s, i) => {
             const d = detail[i]
             return (

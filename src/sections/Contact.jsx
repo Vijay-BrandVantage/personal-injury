@@ -32,7 +32,7 @@ export default function Contact() {
       <div className="wrap">
         <div className="grid overflow-hidden rounded-[2.5rem] bg-white shadow-[0_50px_100px_-50px_rgb(1_34_56/0.45)] lg:grid-cols-[0.9fr_1.1fr]">
           {/* Left: reassurance and direct contact */}
-          <div className="flex flex-col bg-navy-900 p-7 text-white sm:p-8">
+          <div data-reveal="left" className="flex flex-col bg-navy-900 p-7 text-white sm:p-8">
             <h2 id="contact-title" className="font-display text-[2rem] font-bold leading-[1.1] tracking-tight text-white sm:text-[2.4rem]">
               Speak with our team today
             </h2>
@@ -70,7 +70,7 @@ export default function Contact() {
           </div>
 
           {/* Right: enquiry form */}
-          <form onSubmit={onSubmit} className="p-7 sm:p-8" aria-labelledby="form-title" aria-describedby="form-note">
+          <form onSubmit={onSubmit} data-reveal="right" style={{ '--rd': '120ms' }} className="p-7 sm:p-8" aria-labelledby="form-title" aria-describedby="form-note">
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
               <h3 id="form-title" className="text-[1.5rem] font-bold leading-tight">Send an enquiry</h3>
               <p className="text-[0.875rem]">

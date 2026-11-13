@@ -8,10 +8,10 @@ export default function Team() {
     <section id="team" aria-labelledby="team-title" className="bg-mist py-24 lg:py-32">
       <div className="wrap">
         <div className="grid items-center gap-12 overflow-hidden rounded-[2rem] bg-white lg:grid-cols-[0.9fr_1.1fr] lg:gap-0">
-          <div className="relative h-full min-h-[26rem] bg-mist-200">
+          <div data-reveal="left" className="relative h-full min-h-[26rem] bg-mist-200">
             <img src="/images/emma-mead.png" alt="Emma Mead, Managing Director" width="705" height="800" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-top" />
           </div>
-          <div className="p-7 pt-0 sm:p-12 lg:p-16">
+          <div data-reveal="right" style={{ '--rd': '120ms' }} className="p-7 pt-0 sm:p-12 lg:p-16">
             <p className="inline-flex items-center gap-2 rounded-full bg-sky px-4 py-1.5 text-[0.9rem] font-semibold text-navy">
               <Icon name="award" className="size-4" />
               Accredited Specialist in Personal Injury Law

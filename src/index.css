@@ -31,6 +31,7 @@
     scroll-padding-top: 6rem;
   }
   body {
+    overflow-x: clip;
     background: var(--color-paper);
     color: var(--color-body);
     font-family: var(--font-sans);
@@ -175,8 +176,27 @@
   from { transform: scale(1.08); }
   to { transform: scale(1); }
 }
+/* Scroll reveal: a few sections slide in from the side once, when they enter view */
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  transform: translate3d(var(--rx, 0), var(--ry, 0), 0);
+  transition: opacity 700ms var(--ease-out), transform 900ms var(--ease-out);
+  transition-delay: var(--rd, 0ms);
+}
+.reveal-ready [data-reveal="left"] { --rx: -64px; }
+.reveal-ready [data-reveal="right"] { --rx: 64px; }
+.reveal-ready [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+@media (max-width: 640px) {
+  .reveal-ready [data-reveal="left"] { --rx: -28px; }
+  .reveal-ready [data-reveal="right"] { --rx: 28px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .reveal-ready [data-reveal] { opacity: 1; transform: none; transition: none; }
   .intro, .hero-img { animation: none; }
   .card-lift:hover { transform: none; }
 }
